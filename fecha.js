@@ -15,6 +15,7 @@ export default class Fecha {
        
         this._difFecha= new Date (Date.now() - this._fecha);
     }
+    
     getAños(){
         let canAños = 1000 * 60 * 60 * 24 * 365;
         let totalAños = Math.trunc(this._difFecha/canAños);
@@ -45,6 +46,8 @@ export default class Fecha {
         return(`${dia}`);
 
     }
+
+
     
 }
 
