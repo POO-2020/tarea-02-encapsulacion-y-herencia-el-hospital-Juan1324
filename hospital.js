@@ -1,26 +1,26 @@
 import Doctor from "./doctor.js"
 export default class Hospital{
     constructor(nombre,direcciones){
-        this.nombre=nombre;
-        this.direcciones=direcciones;
-        this.doctores=[]
-        this.citas=[]
+        this._nombre=nombre;
+        this._direcciones=direcciones;
+        this._doctores=[]
+        this._citas=[]
     }
     registrarDoctor(doctor){
-        this.doctores.push(doctor);
+        this._doctores.push(doctor);
     }
     listarDoctores(){
-        this.doctores.forEach((doctor, x) => {
+        this._doctores.forEach((doctor, x) => {
             console.log(`(${x+1}) ${doctor.getPerfil()}`)
           });
 
     }
     registrarCita(cita){
-        this.citas.push(cita);
+        this._citas.push(cita);
 
     }
     listarCitas(){
-        this.citas.forEach((cita,y) => {
+        this._citas.forEach((cita,y) => {
             console.log(`(${y+1}) ${cita.getCita()}`);
         })
 
