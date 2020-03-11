@@ -11,40 +11,42 @@ export default class Fecha {
      * @param {number} año 
      */
     constructor(dia,mes,año){
-        this.fecha=new Date(año,mes -1, dia);
+        this._fecha=new Date(año,mes -1, dia);
        
-        this.difFecha= new Date (Date.now() - this.fecha);
+        this._difFecha= new Date (Date.now() - this._fecha);
     }
     getAños(){
         let canAños = 1000 * 60 * 60 * 24 * 365;
-        let totalAños = Math.trunc(this.difFecha/canAños);
+        let totalAños = Math.trunc(this._difFecha/canAños);
         return (`${totalAños}`);
     }
     getMeses(){
         let canMeses = (1000 * 60 * 60 * 24 * 365)/12;
-        let totalMeses = Math.trunc(this.difFecha/canMeses);
+        let totalMeses = Math.trunc(this._difFecha/canMeses);
         return (`${totalMeses}`);
     }
     getSemanas(){
         let canSemanas = (1000 * 60 * 60 * 24 * 365)/52;
-        let totalSemanas = Math.trunc(this.difFecha/canSemanas);
+        let totalSemanas = Math.trunc(this._difFecha/canSemanas);
         return (`${totalSemanas}`);
     }
     getDias(){
         let canDias = 1000 * 60 * 60 * 24;
-        let totalDias = Math.trunc(this.difFecha/canDias);
+        let totalDias = Math.trunc(this._difFecha/canDias);
         return (`${totalDias}`);
     }
     getFecha(){
-        return(`${this.fecha.getDate()}/${this.mesAño[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`);
+        let mes=mesAño[this._fecha.getMonth()]
+        
+        return(`${this._fecha.getDate()}/${mes}/${this._fecha.getFullYear()}`);
     }
     getDia(){
-        return(`${this.diaSemana[this.fecha.getDay()]}`);
+        let dia=diaSemana[this._fecha.getDay()]
+        return(`${dia}`);
 
     }
     
 }
-    
 
 
 
