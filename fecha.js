@@ -1,12 +1,18 @@
+const mesAño =["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
+
+const diaSemana=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
+
+
 export default class Fecha {
+    /**
+     * 
+     * @param {number} dia 
+     * @param {number} mes 
+     * @param {number} año 
+     */
     constructor(dia,mes,año){
-  
         this.fecha=new Date(año,mes -1, dia);
-
-        this.mesAño=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
-
-        this.diaSemana=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
-
+       
         this.difFecha= new Date (Date.now() - this.fecha);
     }
     getAños(){
