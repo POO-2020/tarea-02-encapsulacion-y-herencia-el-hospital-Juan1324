@@ -1,21 +1,12 @@
 const mesAño =["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
-
 const diaSemana=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
 
-
-export default class Fecha {
-    /**
-     * 
-     * @param {number} dia 
-     * @param {number} mes 
-     * @param {number} año 
-     */
+export default class Fecha{
     constructor(dia,mes,año){
+  
         this._fecha=new Date(año,mes -1, dia);
-       
-        this._difFecha= new Date (Date.now() - this._fecha);
+        this._difFecha= new Date (Date.now() - this._fecha)
     }
-    
     getAños(){
         let canAños = 1000 * 60 * 60 * 24 * 365;
         let totalAños = Math.trunc(this._difFecha/canAños);
@@ -37,20 +28,13 @@ export default class Fecha {
         return (`${totalDias}`);
     }
     getFecha(){
-        let mes=mesAño[this._fecha.getMonth()]
-        
+        let mes = mesAño[this._fecha.getMonth()]
         return(`${this._fecha.getDate()}/${mes}/${this._fecha.getFullYear()}`);
     }
-    getDia(){
-        let dia=diaSemana[this._fecha.getDay()]
+    getDiaFecha(){
+        let dia = diaSemana[this._fecha.getDay()]
         return(`${dia}`);
 
     }
-
-
     
 }
-
-
-
-
