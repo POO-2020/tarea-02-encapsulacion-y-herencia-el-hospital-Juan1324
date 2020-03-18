@@ -44,7 +44,8 @@ class Main{
         console.log(this.nombre.getIniciales())
     }
     probarPaciente(){
-       
+        console.log("///////Probar Paciente///////")
+        console.log(this.paciente.getPerfil())
     }
 
 }
