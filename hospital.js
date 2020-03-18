@@ -66,6 +66,7 @@ export default class Hospital{
         this._citas.splice(indice,1)
         return true;
     }    
+    
     actualizarDoctor(doctor,nuevoDoctor){
         let indice = this.buscarIndiceDoctor(doctor);
         if (indice < 0){
