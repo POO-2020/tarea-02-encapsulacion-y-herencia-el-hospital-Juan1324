@@ -10,6 +10,9 @@ export default class Nombre {
         this._apellidoPaterno=apellidoPaterno;
         this._apellidoMaterno=apellidoMaterno;
     }
+    setApellidoP(apellidoPaterno){
+        return this._apellidoPaterno=apellidoPaterno
+    }
     getApellidoPaterno(){
         return(this._apellidoPaterno)
     }

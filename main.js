@@ -108,7 +108,7 @@ class Main{
 
     }
     probarFecha(){
-        console.log("///////Probar fecha///////")
+
         console.log(this.fecha.getAños())
         console.log(this.fecha.getDiaFecha())
         console.log(this.fecha.getDias())
@@ -124,6 +124,9 @@ class Main{
 
     probarNombre(){
         console.log("///////Probar Nombre///////")
+        //Escritura
+        this.nombre.setApellidoP("Sanchéz")
+        //Lectura
         console.log(this.nombre.getNombreCompleto())
         console.log(this.nombre.getApellidoNombre())
         console.log(this.nombre.getIniciales())
@@ -134,6 +137,7 @@ class Main{
     }
     probarDoctor(){
         console.log("///////Probar Paciente///////")
+        this.nombre.setApellidoP("Sanchéz")
         console.log(this.doctor.getPerfil())
     }
     probarCita(){
