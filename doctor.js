@@ -1,12 +1,24 @@
 import Nombre from "./nombre.js"
+
 export default class Doctor{
-    constructor(cedula,especialidad,nombre,numerotel){
+    constructor({cedula,especialidad,doctor,telefono
+    }){
         this._cedula=cedula;
         this._especialidad=especialidad;
-        this._nombre=nombre;
-        this._numerotel=numerotel;
+        this._doctor=doctor;
+        this._telefono=telefono;
+    }
+    getDoctor(){
+        return(this._doctor)
+    }
+    getCedula(){
+        return(this._cedula)
     }
     getPerfil(){
-        return(`${this._cedula},${this._especialidad},${this._nombre.getNombreCompleto()},${this._numerotel}`);
+        return(`
+        ${this._doctor.getNombreCompleto()}
+        ${this._especialidad}
+        ${this._telefono}
+        ${this._cedula}`);
     }
 }
