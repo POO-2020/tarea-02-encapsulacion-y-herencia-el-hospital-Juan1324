@@ -32,12 +32,16 @@ class Main{
         console.log(this.fecha.getSemanas())
     }
     probarTiempo(){
+        console.log("///////Probar Tiempo///////")
         console.log(this.tiempo.getFormato12())
         console.log(this.tiempo.getFormato24())
     }
 
     probarNombre(){
-    
+        console.log("///////Probar Nombre///////")
+        console.log(this.nombre.getNombreCompleto())
+        console.log(this.nombre.getApellidoNombre())
+        console.log(this.nombre.getIniciales())
     }
     probarPaciente(){
        
