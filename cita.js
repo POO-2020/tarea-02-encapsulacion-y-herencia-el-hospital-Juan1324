@@ -20,6 +20,7 @@ export default class Cita {
         }
         return false;
     }
+    
     getPerfil(){
         return(`
         ${this._fecha.getFecha()}
