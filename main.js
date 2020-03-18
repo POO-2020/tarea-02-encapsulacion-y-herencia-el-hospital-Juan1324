@@ -32,7 +32,8 @@ class Main{
         console.log(this.fecha.getSemanas())
     }
     probarTiempo(){
-
+        console.log(this.tiempo.getFormato12())
+        console.log(this.tiempo.getFormato24())
     }
 
     probarNombre(){
