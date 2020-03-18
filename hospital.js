@@ -7,8 +7,13 @@ export default class Hospital{
         this._citas=[]
     }
     registrarDoctor(doctor){
-        this._doctores.push(doctor);
+        this._doctores.push(doctor)
     }
+
+    registrarCita(cita){
+        this._citas.push(cita)
+    }
+
     listarDoctores(){
         this._doctores.forEach((doctor, x) => {
             console.log(`(${x+1}) ${doctor.getPerfil()}`)
