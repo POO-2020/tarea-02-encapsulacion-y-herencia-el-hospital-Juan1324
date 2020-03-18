@@ -20,6 +20,7 @@ export default class Doctor{
         }
         return false;
     }
+    
     getPerfil(){
         return(`
         ${this._doctor.getNombreCompleto()}
