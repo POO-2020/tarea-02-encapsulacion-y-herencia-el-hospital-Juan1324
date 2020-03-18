@@ -16,6 +16,7 @@ export default class Paciente {
     getNombre(){
         return this._nombre
     }
+    
     getPerfil(){
         return(`
         ${this._nombre.getNombreCompleto()}
