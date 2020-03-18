@@ -23,10 +23,16 @@ class Main{
         
     }
     probarFecha(){
-
+        console.log("///////Probar fecha///////")
+        console.log(this.fecha.getAños())
+        console.log(this.fecha.getDiaFecha())
+        console.log(this.fecha.getDias())
+        console.log(this.fecha.getFecha())
+        console.log(this.fecha.getMeses())
+        console.log(this.fecha.getSemanas())
     }
     probarTiempo(){
-       
+
     }
 
     probarNombre(){
