@@ -48,4 +48,8 @@ export default class Hospital{
         });
         return indice;
     }
+    buscarIndiceCita(cita){
+        let indice = this._citas.findIndex(reservacion => reservacion.esIgualA(cita))
+        return indice;
+    }    
 }
