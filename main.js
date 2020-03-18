@@ -9,50 +9,31 @@ import Hospital from "./hospital.js"
 class Main{
 
     constructor(){
-        this.paciente1= new Paciente(
-            new Nombre("Samuel","Cardenas","Del Rio"),
-            3121086574,
-            new Fecha(12,10,2010))
+        this.fecha=new Fecha(15,4,2019)
+        this.tiempo=new Tiempo(14,30,"pm")
+        this.nombre=new Nombre("Adrian","Gonzales","Moreno")
+
+        let infPaciente={
+            nombre: new Nombre("Teresa","Cortez","Sandoval"),
+            fecha: new Fecha(21,5,2014),
+            telefono: 3129022324
+        }
+
+        this.paciente= new Paciente(infPaciente)
         
     }
     probarFecha(){
 
-        let fecha= new Fecha(
-            10,
-            12,
-            2000
-        )
-
-        console.log("Años "+fecha.getAños())
-        console.log("Meses "+fecha.getMeses())
-        console.log("Semanas "+fecha.getSemanas())
-        console.log("Dias "+fecha.getDias())
-        console.log("Dia "+fecha.getDia())
-        console.log("Fecha "+fecha.getFecha())    
-
     }
     probarTiempo(){
-        let tiempo= new Tiempo(
-            12,
-            30,
-            "am"
-        )
-        console.log(tiempo.getFormato12())
-        console.log(tiempo.getFormato24())
+       
     }
 
     probarNombre(){
-        let persona= new Nombre(
-            "Juan",
-            "Ramos",
-            "Campos"
-        )
-        console.log(persona.getNombreCompleto())
-        console.log(persona.getApellidoNombre())
-        console.log(persona.getIniciales())
+    
     }
     probarPaciente(){
-        console.log(this.paciente1.getPerfil())
+       
     }
 
 }
