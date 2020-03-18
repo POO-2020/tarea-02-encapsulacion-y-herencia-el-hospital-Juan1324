@@ -29,6 +29,15 @@ class Main{
             cedula: "kj67dw78"
         }
         this.doctor= new Doctor(infDoctor)
+
+        
+        let infCita = {
+            fecha: new Fecha(22, 5, 2020),
+            hora: new Tiempo(4, 25,'pm'),
+            doctor: new Doctor(infDoctor),
+            paciente: new Paciente(infPaciente)
+        }
+        this.cita= new Cita(infCita)
         
     }
     probarFecha(){
@@ -60,6 +69,10 @@ class Main{
         console.log("///////Probar Paciente///////")
         console.log(this.doctor.getPerfil())
     }
+    probarCita(){
+        console.log("///////Probar Cita///////")
+        console.log(this.cita.getPerfil())
+    }
 
 }
 let app=new Main();
@@ -68,6 +81,8 @@ app.probarTiempo();
 app.probarNombre();
 app.probarPaciente();
 app.probarDoctor();
+app.probarCita();
+
 
 
 
