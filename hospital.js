@@ -32,4 +32,12 @@ export default class Hospital{
         })
         return buscar;
     }
+    buscarCita(cita){
+        let buscar = null;
+        this._citas.forEach(reservacion => {
+            if (reservacion.esIgualA(cita)){
+                buscar = reservacion}
+        })
+        return buscar;
+    }
 }
