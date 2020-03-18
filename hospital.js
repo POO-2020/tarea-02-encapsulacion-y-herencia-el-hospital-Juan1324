@@ -15,11 +15,16 @@ export default class Hospital{
     }
 
     listarDoctores(){
-        this._doctores.forEach((doctor, x) => {
+        this._doctores.forEach( (doctor,x) => {
             console.log(`(${x+1}) ${doctor.getPerfil()}`)
-          });
-
+        })      
     }
+    listarCitas(){
+        this._citas.forEach( (cita,y) => {
+            console.log(`(${y+1}) ${cita.getPerfil()}`)
+        })      
+    }
+
     registrarCita(cita){
         this._citas.push(cita);
 
