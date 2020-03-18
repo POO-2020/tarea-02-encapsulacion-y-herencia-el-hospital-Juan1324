@@ -1,21 +1,24 @@
 import Fecha from "./fecha.js"
-import Nombre from "./nombre.js"
-import Tiempo from "./tiempo.js"
 import Paciente from "./paciente.js"
-import doctor from "./doctor.js"
-export default class Cita{
-    
+import Nombre from "./nombre.js"
+import Tiempos from "./tiempo.js"
+import Doctor from "./doctor.js"
+export default class Cita {
+
     constructor({fecha,hora,doctor,paciente}){
-        this._fecha=fecha;
-        this._hora=hora;
-        this._doctor=doctor;
-        this._paciente=paciente;
+    this._fecha=fecha;
+    this._hora=hora;
+    this._doctor=doctor;
+    this._paciente=paciente;
     }
-    getDoctor(){
-        return this._doctor
+    getFechaCita(){
+        return this._fecha;
     }
-    getHora(){
-        return this._hora
+    esIgualA(cita){
+        if(cita.getFechaCita() === this._fecha){
+        return true;
+        }
+        return false;
     }
     getPerfil(){
         return(`
