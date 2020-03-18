@@ -24,15 +24,12 @@ export default class Hospital{
             console.log(`(${y+1}) ${cita.getPerfil()}`)
         })      
     }
-
-    registrarCita(cita){
-        this._citas.push(cita);
-
-    }
-    listarCitas(){
-        this._citas.forEach((cita,y) => {
-            console.log(`(${y+1}) ${cita.getCita()}`);
+    buscarDoctor(doctor){
+        let buscar = null;
+        this._doctores.forEach(medico => {
+            if (medico.esIgualA(doctor)){
+                buscar = medico}
         })
-
+        return buscar;
     }
 }
