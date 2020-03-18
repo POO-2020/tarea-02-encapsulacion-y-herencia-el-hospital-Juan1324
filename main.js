@@ -166,7 +166,7 @@ class Main{
         this.hospital.listarDoctores()
         
         //Actualizar
-        console.log(this.hospital.actualizarDoctor(this.doctor2,this.doctor3))
+        console.log(this.hospital.actualizarDoctor(this.doctor2,this.doctor))
         this.hospital.listarDoctores()
 
     }
