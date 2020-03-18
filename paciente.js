@@ -8,13 +8,18 @@ export default class Paciente {
      * @param {Number} numerotel 
      * @param {Date} fecha 
      */
-    constructor(nombre,numerotel,fecha){
+    constructor({nombre,fecha,telefono}){
         this._nombre=nombre;
-        this._numerotel=numerotel;
+        this._telefono=telefono;
         this._fecha=fecha;
     }
+    getNombre(){
+        return this._nombre
+    }
     getPerfil(){
-        return(`${this._nombre.getNombreCompleto()},${this._fecha.getFecha()},${this._numerotel}`);
-
+        return(`
+        ${this._nombre.getNombreCompleto()}
+        ${this._fecha.getFecha()}
+        ${this._telefono}`);
     }
 } 
