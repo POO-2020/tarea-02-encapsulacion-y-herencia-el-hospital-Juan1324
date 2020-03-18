@@ -23,6 +23,22 @@ class Main{
 
         this.paciente= new Paciente(infPaciente)
 
+        let infPaciente2={
+            nombre: new Nombre("Amanda","Astilla","Beltrán"),
+            fecha: new Fecha(21,5,2014),
+            telefono: 3129022324
+        }
+
+        this.paciente= new Paciente(infPaciente2)
+
+        let infPaciente3={
+            nombre: new Nombre("Veronica","Torre","Valencia"),
+            fecha: new Fecha(21,5,2014),
+            telefono: 3129022324
+        }
+
+        this.paciente= new Paciente(infPaciente3)
+
         let infDoctor={
             
             doctor: new Nombre("Gonzalo","Ramírez","Corona"),
@@ -32,6 +48,23 @@ class Main{
         }
         this.doctor= new Doctor(infDoctor)
 
+        let infDoctor2={
+            
+            doctor: new Nombre("Pedro","Corona","Sanchéz"),
+            especialidad: "Neurólogo",
+            telefono: 3129133487,
+            cedula: "jbksd83"
+        }
+        this.doctor2= new Doctor(infDoctor2)
+
+        let infDoctor3={
+            
+            doctor: new Nombre("Rosa","Gómez","Solano"),
+            especialidad: "Pediatra",
+            telefono: 3125793109,
+            cedula: "cvx635"
+        }
+        this.doctor3= new Doctor(infDoctor3)
         
         let infCita = {
             fecha: new Fecha(22, 5, 2020),
@@ -40,6 +73,22 @@ class Main{
             paciente: new Paciente(infPaciente)
         }
         this.cita= new Cita(infCita)
+
+        let infCita2 = {
+            fecha: new Fecha(22, 5, 2020),
+            hora: new Tiempo(4, 25,'pm'),
+            doctor: new Doctor(infDoctor),
+            paciente: new Paciente(infPaciente)
+        }
+        this.cita2= new Cita(infCita2)
+
+        let infCita3 = {
+            fecha: new Fecha(22, 5, 2020),
+            hora: new Tiempo(4, 25,'pm'),
+            doctor: new Doctor(infDoctor),
+            paciente: new Paciente(infPaciente)
+        }
+        this.cita3= new Cita(infCita3)
 
         let infPacienteAsegurado={
             nombre: new Nombre('Thomas','García','Carrillo'),
@@ -50,6 +99,12 @@ class Main{
             compañia:"HT"
         }
         this.PacienteAsegurado=new PacienteAsegurado(infPacienteAsegurado)
+
+        let infhospital={
+            nombre: "HT",
+            direcciones:"Colonia Santa Marta, calle La condesa #245"
+        }
+        this.hospital=new Hospital(infhospital)
 
     }
     probarFecha(){
@@ -89,6 +144,30 @@ class Main{
         console.log("///////Probar Paciente Asegurado///////")
         console.log(this.PacienteAsegurado.getPerfil())
     }
+    probarHospital(){
+        console.log("////////////////////////")
+        this.hospital.registrarDoctor(this.doctor)
+        this.hospital.registrarDoctor(this.doctor2)
+        this.hospital.registrarDoctor(this.doctor3)
+        this.hospital.listarDoctores()
+
+        //Buscar Doctor
+        console.log(this.hospital.buscarDoctor(this.doctor))
+        console.log(this.hospital.buscarDoctor(this.doctor2))
+        console.log(this.hospital.buscarDoctor(this.doctor3))
+
+        //Encontrar Indice
+        console.log(this.hospital.buscarIndiceDoctor(this.doctor))
+        console.log(this.hospital.buscarIndiceDoctor(this.doctor2))
+        console.log(this.hospital.buscarIndiceDoctor(this.doctor3))
+
+        //Eliminar Doctores
+        console.log(this.hospital.eliminarDoctor(this.doctor))
+        this.hospital.listarDoctores()
+        
+        //Actualizar
+        console.log(this.hospital.actualizarDoctor(this.doctor2,this.doctor3))
+    }
 
 }
 let app=new Main();
@@ -99,6 +178,7 @@ app.probarPaciente();
 app.probarDoctor();
 app.probarCita();
 app.probarPacienteAsegurado();
+app.probarHospital();
 
 
 
