@@ -166,10 +166,33 @@ class Main{
         this.hospital.listarDoctores()
         
         //Actualizar
-        console.log(this.hospital.actualizarDoctor(this.doctor2,this.doctor))
-        this.hospital.listarDoctores()
+        console.log(this.hospital.actualizarDoctor(this.doctor2,this.doctor3))
 
+
+        console.log("////////////////////////")
+        //Registrar Cita
+        this.hospital.registrarCita(this.cita)
+        this.hospital.registrarCita(this.cita2)
+        this.hospital.registrarCita(this.cita3)
+        this.hospital.listarCitas()
+
+        //Buscar Cita
+        console.log(this.hospital.buscarCita(this.cita))
+        console.log(this.hospital.buscarCita(this.cita2))
+        
+        //EncontrarIndiceCita
+        console.log(this.hospital.buscarIndiceCita(this.cita))
+        console.log(this.hospital.buscarIndiceCita(this.cita2))
+
+        //Eliminar Cita
+        console.log(this.hospital.eliminarCita(this.cita))
+        this.hospital.listarCitas()
+
+        //Actualizar
+        console.log(this.hospital.actualizarCita(this.cita2,this.cita))
+        this.hospital.listarCitas()
     }
+    
 
 }
 let app=new Main();
