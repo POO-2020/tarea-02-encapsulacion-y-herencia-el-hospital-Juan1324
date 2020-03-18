@@ -51,5 +51,12 @@ export default class Hospital{
     buscarIndiceCita(cita){
         let indice = this._citas.findIndex(reservacion => reservacion.esIgualA(cita))
         return indice;
+    }
+    eliminarDoctor(doctor){
+        let indice = this.buscarDoctor(doctor)
+        if (indice < 0){
+            return false}
+        this._doctores.splice(indice,1)
+        return true;
     }    
 }
