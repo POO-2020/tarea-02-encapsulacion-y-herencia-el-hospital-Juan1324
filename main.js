@@ -5,6 +5,8 @@ import Paciente from "./paciente.js"
 import Doctor from "./doctor.js"
 import Cita from "./cita.js"
 import Hospital from "./hospital.js"
+import PacienteAsegurado from "./pacienteAsegurado.js"
+
 
 class Main{
 
@@ -38,7 +40,17 @@ class Main{
             paciente: new Paciente(infPaciente)
         }
         this.cita= new Cita(infCita)
-        
+
+        let infPacienteAsegurado={
+            nombre: new Nombre('Thomas','García','Carrillo'),
+            fecha: new Fecha(7,2,2018),
+            telefono:3128796483,
+            numeroPoliza:89807,
+            fechaFinVigencia: new Fecha(19,5,2018),
+            compañia:"HT"
+        }
+        this.PacienteAsegurado=new PacienteAsegurado(infPacienteAsegurado)
+
     }
     probarFecha(){
         console.log("///////Probar fecha///////")
@@ -73,6 +85,10 @@ class Main{
         console.log("///////Probar Cita///////")
         console.log(this.cita.getPerfil())
     }
+    probarPacienteAsegurado(){
+        console.log("///////Probar Paciente Asegurado///////")
+        console.log(this.PacienteAsegurado.getPerfil())
+    }
 
 }
 let app=new Main();
@@ -82,6 +98,8 @@ app.probarNombre();
 app.probarPaciente();
 app.probarDoctor();
 app.probarCita();
+app.probarPacienteAsegurado();
+
 
 
 
