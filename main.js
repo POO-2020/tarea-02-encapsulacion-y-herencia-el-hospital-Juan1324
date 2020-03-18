@@ -20,6 +20,15 @@ class Main{
         }
 
         this.paciente= new Paciente(infPaciente)
+
+        let infDoctor={
+            
+            doctor: new Nombre("Gonzalo","Ramírez","Corona"),
+            especialidad: "Cirujano",
+            telefono: 3127860959,
+            cedula: "kj67dw78"
+        }
+        this.doctor= new Doctor(infDoctor)
         
     }
     probarFecha(){
@@ -47,6 +56,10 @@ class Main{
         console.log("///////Probar Paciente///////")
         console.log(this.paciente.getPerfil())
     }
+    probarDoctor(){
+        console.log("///////Probar Paciente///////")
+        console.log(this.doctor.getPerfil())
+    }
 
 }
 let app=new Main();
@@ -54,5 +67,7 @@ app.probarFecha();
 app.probarTiempo();
 app.probarNombre();
 app.probarPaciente();
+app.probarDoctor();
+
 
 
