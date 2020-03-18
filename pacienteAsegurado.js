@@ -10,6 +10,7 @@ export default class PacienteAsegurado extends Paciente {
         this._finVigencia= numeroPoliza;
         this._compañia= compañia;
     }
+    
     getPerfil(){
         return(`
         ${this._nombre.getNombreCompleto()}
