@@ -10,16 +10,14 @@ export default class Nombre {
         this._apellidoPaterno=apellidoPaterno;
         this._apellidoMaterno=apellidoMaterno;
     }
-
-
+    getApellidoPaterno(){
+        return(this._apellidoPaterno)
+    }
     getNombreCompleto(){
         return(`${this._nombre} ${this._apellidoPaterno} ${this._apellidoMaterno}`);
-
     }
-
     getApellidoNombre(){
         return(`${this._apellidoPaterno} ${this._apellidoMaterno} ${this._nombre}`);
-
     }
     getIniciales(){
         let x=this._nombre[0]
@@ -27,8 +25,5 @@ export default class Nombre {
         let z=this._apellidoMaterno[0]
 
         return(`${x}${y}${z}`);
-    }
-    setApellidoMaterno(apellido){
-        this.apellidoMaterno = apellido.toUpperCase()
     }
 }
