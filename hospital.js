@@ -40,4 +40,12 @@ export default class Hospital{
         })
         return buscar;
     }
+    buscarIndiceDoctor(doctor){
+        let indice = -1
+        this._doctores.forEach((medico,x) => {
+            if (medico.esIgualA(doctor)){
+                indice= x;}
+        });
+        return indice;
+    }
 }
