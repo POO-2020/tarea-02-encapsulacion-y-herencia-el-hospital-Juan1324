@@ -58,5 +58,12 @@ export default class Hospital{
             return false}
         this._doctores.splice(indice,1)
         return true;
+    }
+    eliminarCita(cita){
+        let indice = this.buscarCita(cita)
+        if (indice < 0){
+            return false}
+        this._citas.splice(indice,1)
+        return true;
     }    
 }
